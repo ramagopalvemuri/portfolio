@@ -3,167 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkata Ramagopal Vemuri - Portfolio</title>
+    <title>Portfolio - Venkata Ramagopal Vemuri</title>
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background-color: #1e1e2f;
-            color: #fff;
-        }
-
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background-color: #12122b;
-            color: #fff;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: #ffdd57;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #ffdd57;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 5rem 10%;
-            background-color: #1e1e2f;
-        }
-
-        .hero-content {
-            max-width: 50%;
-        }
-
-        .greeting {
-            color: #ffdd57;
-            font-size: 1.2rem;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin: 0.5rem 0;
-        }
-
-        .intro {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            color: #cfcfcf;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background-color: #0f0e17;
             line-height: 1.6;
         }
 
-        .contact-button {
-            background-color: #ffdd57;
-            color: #12122b;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
+        header {
+            background-color: #1a1a2e;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            color: #e94560;
+            animation: fadeInDown 1.2s ease-out;
+        }
+
+        header p {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .social-links a {
+            color: #e94560;
+            margin: 0 15px;
+            font-size: 1.1em;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: color 0.3s;
         }
 
-        .contact-button:hover {
-            background-color: #e5c441;
+        .social-links a:hover {
+            color: #a3bffa;
         }
 
-        .hero-image img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #1f1f2e;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: transform 0.2s;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
+        section:hover {
+            transform: scale(1.02);
+        }
 
-            .hero-content, .hero-image {
-                max-width: 100%;
-            }
+        section h2 {
+            font-size: 2.5em;
+            color: #a3bffa;
+            margin-bottom: 20px;
+            position: relative;
+            animation: fadeIn 1s ease-out;
+        }
 
-            h1 {
-                font-size: 2.5rem;
-            }
+        .project-item, .education, .skills {
+            margin-bottom: 30px;
+            background-color: #2d2d44;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-            .intro {
-                font-size: 1rem;
+        .project-item:hover, .education:hover, .skills:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-item h3, .education h3 {
+            color: #a3bffa;
+        }
+
+        .project-item p, .education p, .skills p {
+            font-size: 1.1em;
+            color: #d8d8e2;
+        }
+
+        .project-item a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .project-item a:hover {
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: #1a1a2e;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            color: #ffffff;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">About<span>Me.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="container">
+            <h1>Venkata Ramagopal Vemuri</h1>
+            <p>Web Developer and Designer</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ramagopal" target="_blank">LinkedIn</a>
+                <a href="https://leetcode.com/ramagopalvemuri" target="_blank">LeetCode</a>
+                <a href="mailto:ramagopalvemuri9390@gmail.com">Email</a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="greeting">Hello, Welcome</p>
-            <h1>I’m Venkata Ramagopal Vemuri</h1>
-            <p class="intro">A passionate Computer Engineering student focused on developing solutions through software and web development.</p>
-            <a href="mailto:ramagopalvemuri9390@gmail.com" class="contact-button">Contact Me</a>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>B.Tech Computer Engineering student with experience in web development, cloud certifications, and various technical skills.</p>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Crime Vision</h3>
+            <p>Developed a deep learning-based system to analyze crime scene images and video footage using Python, Flask, and DenseNet121.</p>
+        </div>
+        <div class="project-item">
+            <h3>Travellopedia</h3>
+            <p>Created a responsive travel application using React.js, Firebase, and Material-UI.</p>
+            <a href="https://travel-guide-c759d.web.app/" target="_blank">View Project</a>
         </div>
     </section>
 
+    <section class="skills">
+        <h2>Technical Skills</h2>
+        <p>Java, Python, C/C++, SQL, JavaScript, HTML/CSS, React, Node.js, Flask, AWS, Git, Google Cloud Platform, VS Code</p>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <p>Vellore Institute of Technology, B.Tech in Computer Engineering (CGPA: 6.87)</p>
+        <p>Bhashyam Junior College, Intermediate (Score: 83%)</p>
+        <p>Loyola Public School, ICSE (Score: 63%)</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Venkata Ramagopal Vemuri</p>
+    </footer>
+
     <script>
-        // Smooth scrolling to sections
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        // JavaScript for smooth scrolling and hover animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+
+            sections.forEach((section) => {
+                section.addEventListener("mouseenter", () => {
+                    section.classList.add("active");
+                });
+
+                section.addEventListener("mouseleave", () => {
+                    section.classList.remove("active");
+                });
+            });
+
+            const scrollLinks = document.querySelectorAll("header .social-links a");
+
+            // Smooth scroll for social links
+            scrollLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
                 });
             });
         });
+
+        // Alert message on loading the site
+        window.onload = function () {
+            alert("Welcome to Venkata Ramagopal's Portfolio!");
+        }
     </script>
 </body>
 </html>
